@@ -46,10 +46,10 @@ def main():
     st.subheader("Select a topic which you'd like to get the sentiment analysis on :")
 
     ################# Twitter API Connection #######################
-    consumer_key = '8960pswi0ALmad8bD27Bofh22'
-    consumer_secret = 'hSFcDZUsfwSbn3eutUirambdqLK1dwMyZkL40BAuoYY4mcbLbE'
-    access_token = '934833577803616257-mVf5WjNVNfT2eWmQ4T46N2T2BDFZ1tV'
-    access_token_secret = '5xQVESFc6kGaQSbtdhvew1WPi73Yne1a9lTi62oPrkKba'
+    consumer_key = '<consumer Key here>'
+    consumer_secret = '<Consumer secret key here>'
+    access_token = '<access token>'
+    access_token_secret = '<access token secret here>'
 
 
 
