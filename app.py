@@ -9,6 +9,7 @@ import tweepy
 import json
 from tweepy import OAuthHandler
 import re
+import os
 import textblob
 from textblob import TextBlob
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
@@ -46,10 +47,12 @@ def main():
     st.subheader("Select a topic which you'd like to get the sentiment analysis on :")
 
     ################# Twitter API Connection #######################
-    consumer_key = '<consumer Key here>'
-    consumer_secret = '<Consumer secret key here>'
-    access_token = '<access token>'
-    access_token_secret = '<access token secret here>'
+
+    # Tokens
+    consumer_key = os.getenv('consumer_key')
+    consumer_secret = os.getenv('consumer_secret')
+    access_token = os.getenv('access_token')
+    access_token_secret = os.getenv('access_token_secret')
 
 
 
