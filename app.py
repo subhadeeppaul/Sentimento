@@ -113,15 +113,13 @@ def main():
         return text_new
 
     
-    #
-    # from PIL import Image
-    # image = Image.open('Logo1.jpg')
-    # st.image(image, caption='Twitter for Analytics',use_column_width=True)
-    
+    from PIL import Image
+    image = Image.open('Logo2.jpg')
+    st.image(image, caption='Twitter for Analytics',use_column_width=True)
     
     # Collect Input from user :
     Topic = str()
-    Topic = str(st.text_input("Enter the topic you are interested in (Press Enter once done)"))     
+    Topic = str(st.text_input("Analyze a trend!"))     
     
     if len(Topic) > 0 :
         
@@ -189,6 +187,7 @@ def main():
             text_newALL = prepCloud(text,Topic)
             wordcloud = WordCloud(stopwords=stopwords,max_words=800,max_font_size=70).generate(text_newALL)
             st.write(plt.imshow(wordcloud, interpolation='bilinear'))
+	    plt.axis("off")
             st.pyplot()
         
         
@@ -201,6 +200,7 @@ def main():
             #text_positive=" ".join([word for word in text_positive.split() if word not in stopwords])
             wordcloud = WordCloud(stopwords=stopwords,max_words=800,max_font_size=70).generate(text_new_positive)
             st.write(plt.imshow(wordcloud, interpolation='bilinear'))
+	    plt.axis("off")
             st.pyplot()
         
         
@@ -213,6 +213,7 @@ def main():
             #text_negative=" ".join([word for word in text_negative.split() if word not in stopwords])
             wordcloud = WordCloud(stopwords=stopwords,max_words=800,max_font_size=70).generate(text_new_negative)
             st.write(plt.imshow(wordcloud, interpolation='bilinear'))
+	    plt.axis("off")
             st.pyplot()
         
         
