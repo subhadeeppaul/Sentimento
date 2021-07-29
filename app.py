@@ -88,7 +88,7 @@ def main():
                 pass
     # Function to Clean the Tweet.
     def clean_tweet(tweet):
-        return ' '.join(re.sub('(@[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)|([RT])', ' ', tweet.lower()).split())
+        return ' '.join(re.sub(r'(@[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)|([RT])', ' ', tweet.lower()).split())
     
         
     # Funciton to analyze Sentiment
@@ -105,7 +105,7 @@ def main():
     def prepCloud(Topic_text,Topic):
         Topic = str(Topic).lower()
         Topic=' '.join(re.sub('([^0-9A-Za-z \t])', ' ', Topic).split())
-        Topic = re.split("\s+",str(Topic))
+        Topic = re.split(r"\s+",str(Topic))
         stopwords = set(STOPWORDS)
         stopwords.update(Topic) ### Add our topic in Stopwords, so it doesnt appear in wordClous
         ###
@@ -213,7 +213,7 @@ def main():
             #text_negative=" ".join([word for word in text_negative.split() if word not in stopwords])
             wordcloud = WordCloud(stopwords=stopwords,max_words=800,max_font_size=70).generate(text_new_negative)
             st.write(plt.imshow(wordcloud, interpolation='bilinear'))
-	    plt.axis("off")
+            plt.axis("off")
             st.pyplot()
         
         
