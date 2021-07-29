@@ -37,7 +37,7 @@ img {
 
 def main():
     """ Common ML Dataset Explorer """
-    #st.title("Live twitter Sentiment analysis")
+    st.title("SENTIMENTO")
     #st.subheader("Select a topic which you'd like to get the sentiment analysis on :")
 
     html_temp = """
@@ -227,6 +227,9 @@ def main():
     
     st.sidebar.header("For Any Queries/Suggestions Please reach out at :")
     st.sidebar.info("subhadeeppaul35@gmail.com")
+    st.sidebar.text("Project Mentor:")
+    st.sidebar.info("Mr. Saifuddin Ahmed")
+
     #st.sidebar.subheader("Scatter-plot setup")
     #box1 = st.sidebar.selectbox(label= "X axis", options = numeric_columns)
     #box2 = st.sidebar.selectbox(label="Y axis", options=numeric_columns)
