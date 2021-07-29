@@ -187,7 +187,7 @@ def main():
             text_newALL = prepCloud(text,Topic)
             wordcloud = WordCloud(stopwords=stopwords,max_words=800,max_font_size=70).generate(text_newALL)
             st.write(plt.imshow(wordcloud, interpolation='bilinear'))
-	    plt.axis("off")
+			plt.axis("off")
             st.pyplot()
         
         
